@@ -5,6 +5,6 @@ pipelineConfig:
       - pipeline: release
         name: jx-promote
         step: 
-          image: gcr.io/jenkinsxio-labs/jxl:0.0.181
+          image: gcr.io/jenkinsxio-labs-private/jxl:0.0.45
           comment: promote through all 'Auto' promotion Environments
           sh: jx promote -b --all-auto --timeout 1h --version \$(cat ../../VERSION)
